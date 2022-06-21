@@ -120,27 +120,26 @@ export default function MiniDrawer() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-
                     {sideBarList.map((item, index) => (
-                        <ListItem key={index} disablePadding sx={{ display: 'block' }}>
-                            <ListItemButton
-                                sx={{
-                                    minHeight: 48,
-                                    justifyContent: open ? 'initial' : 'center',
-                                    px: 2.5,
-                                }}
-                            >
-                                <ListItemIcon
+                        <ListItem key={index} disablePadding sx={{ display: 'block' }} title={item.name}>
+                            <Link to={item.path}>
+                                <ListItemButton
                                     sx={{
-                                        minWidth: 0,
-                                        mr: open ? 3 : 'auto',
-                                        justifyContent: 'center',
-                                    }}
-                                >
-                                    <Link to={item.path}>{item.icon}</Link>
-                                </ListItemIcon>
-                                <ListItemText primary={item.name} sx={{ opacity: open ? 1 : 0 }} />
-                            </ListItemButton>
+                                        minHeight: 48,
+                                        justifyContent: open ? 'initial' : 'center',
+                                        px: 2.5,
+                                    }}>
+                                    <ListItemIcon
+                                        sx={{
+                                            minWidth: 0,
+                                            mr: open ? 3 : 'auto',
+                                            justifyContent: 'center',
+                                        }}>
+                                        {item.icon}
+                                    </ListItemIcon>
+                                    <ListItemText primary={item.name} sx={{ opacity: open ? 1 : 0, textDecoration: 'none' }} />
+                                </ListItemButton>
+                            </Link>
                         </ListItem>
                     ))}
                 </List>
