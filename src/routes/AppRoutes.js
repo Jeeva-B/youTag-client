@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import App from '../App';
-import Home from "../Home";
-import About from "../About";
+import Tags from "../component/Tags";
+import Trending from "../component/Trending";
+import VideoTags from "../component/VideoTags";
 
 const AppRoutes = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/App" element={<App />} />
+            <Route path="/" element={<Tags />} />
+            <Route path="/trending" element={<Trending />} />
+            <Route path="/videotags" element={<VideoTags />} />
         </Routes>
     );
 };
