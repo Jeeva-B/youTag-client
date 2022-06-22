@@ -6,10 +6,23 @@ import './assets/css/index.css';
 import Layout from './component/Layout';
 import reportWebVitals from './reportWebVitals';
 
+
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { rootReducer } from './reducer/tagReducer';
+
+const initialState = {};
+const middleware = applyMiddleware(thunk);
+const store = createStore(rootReducer, initialState, middleware);
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Layout />
+    <Provider store={store}>
+      <Layout />
+    </Provider>
   </BrowserRouter>
 );
 
