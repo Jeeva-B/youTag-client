@@ -13,7 +13,7 @@ const Tags = () => {
                 justifyContent="center"
                 alignItems="center"
                 spacing={5}>
-                <Grid item sm={12}> <InputField /></Grid>
+                <Grid item lg={12} md={10} sm={12} xs={12} component='div'> <InputField /></Grid>
                 <Grid item ><Chip /></Grid>
             </Grid>
         </Container>

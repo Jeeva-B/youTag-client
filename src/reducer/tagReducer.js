@@ -1,4 +1,4 @@
-import { SET_REQUESTING, SET_TAGS } from "../action/ActionCreator";
+import { SET_REQUESTING, SET_TAGS, CLEAR_TAGS } from "../action/ActionCreator";
 
 const initialState = {
     isRequesting: false,
@@ -9,12 +9,17 @@ const initialState = {
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_TAGS: {
-            state = { ...state, tags: action.payload };
+            state = { ...state, tags: action.payload, isRequesting: false };
             break;
         }
 
         case SET_REQUESTING: {
             state = { ...state, isRequesting: action.payload };
+            break;
+        }
+
+        case CLEAR_TAGS: {
+            state = { ...state, tags: [] };
             break;
         }
 
