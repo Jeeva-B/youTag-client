@@ -24,8 +24,8 @@ const Tags = () => {
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                spacing={5}>
-                <Grid item lg={12} md={10} sm={12} xs={12} component='div'>
+                sx={{ mt: 3 }}>
+                <Grid item lg={9} md={10} sm={11} xs={12}>
                     <InputField
                         placeHolder={'video title here'}
                         value={title}
@@ -33,7 +33,7 @@ const Tags = () => {
                         onSubmit={getTitleTags}
                     />
                 </Grid>
-                <Grid item ><Chip /></Grid>
+                <Grid item lg={9} md={10} sm={11} xs={12} sx={{ mt: 5 }}><Chip /></Grid>
             </Grid>
         </Container>
     );

@@ -26,7 +26,7 @@ export default function ChipsArray() {
                 justifyContent: 'center',
                 flexWrap: 'wrap',
                 listStyle: 'none',
-                p: 5,
+                p: 0,
                 m: 0,
             }}
             component="ul"
@@ -42,9 +42,7 @@ export default function ChipsArray() {
                     </ListItem>
                 );
             }) :
-                <Box>
-                    <img className='growImage' src={Grow} alt='youtube tags' loading="lazy" />
-                </Box>
+                !tags && <img className='growImage' src={Grow} alt='youtube tags' loading="lazy" />
             }
         </Box>
     );
