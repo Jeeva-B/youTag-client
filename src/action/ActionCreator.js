@@ -1,3 +1,6 @@
 export const SET_TAGS = 'SET_TAGS';
 export const SET_REQUESTING = 'SET_REQUESTING';
+export const SET_REQUESTING_FOR_VIDEO_TAG = 'SET_REQUESTING_FOR_VIDEO_TAG';
 export const CLEAR_TAGS = 'CLEAR_TAGS';
+export const SET_TAGS_BY_ID = 'SET_TAGS_BY_ID';
+export const CLEAR_VIDEO_TAG = 'CLEAR_VIDEO_TAG';

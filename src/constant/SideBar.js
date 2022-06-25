@@ -9,13 +9,13 @@ export const sideBarList = [
         path: '/'
     },
     {
+        name: 'Video Tags',
+        icon: <MissedVideoCallIcon />,
+        path: '/videotags'
+    },
+    {
         name: 'Trending',
         icon: <WhatshotIcon />,
         path: '/trending'
     },
-    {
-        name: 'Video Tags',
-        icon: <MissedVideoCallIcon />,
-        path: '/videotags'
-    }
 ];

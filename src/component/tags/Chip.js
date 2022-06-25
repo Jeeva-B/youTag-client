@@ -1,16 +1,14 @@
 import * as React from 'react';
-import { useSelector } from 'react-redux';
 import { styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import { Box } from '@mui/system';
 import Loading from '../../assets/common/Loading';
 import Grow from '../../assets/images/steppingUp.png';
+import ActionAlerts from '../../assets/common/Alert';
 
 const ListItem = styled('li')(({ theme }) => ({ margin: theme.spacing(0.5), }));
 
-export default function ChipsArray() {
-    const tags = useSelector(state => state?.tags);
-    const isRequesting = useSelector(state => state?.isRequesting);
+export default function ChipsArray({ tags, isRequesting }) {
     const [chipData, setChipData] = React.useState([]);
 
     React.useEffect(() => {
@@ -36,13 +34,14 @@ export default function ChipsArray() {
                 return (
                     <ListItem key={index}>
                         <Chip
+                            sx={{ fontSize: '20px', m: 0.2 }}
                             label={tag}
                             onDelete={handleDelete(tag)}
                         />
                     </ListItem>
                 );
             }) :
-                !tags && <img className='growImage' src={Grow} alt='youtube tags' loading="lazy" />
+                !tags ? <img className='growImage' src={Grow} alt='youtube tags' loading="lazy" /> : <ActionAlerts type={'error'} text={'No tags found'} />
             }
         </Box>
     );
