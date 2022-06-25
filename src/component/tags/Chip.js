@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import { Box } from '@mui/system';
-import Loading from '../assets/common/Loading';
-import Grow from '../assets/images/steppingUp.png';
+import Loading from '../../assets/common/Loading';
+import Grow from '../../assets/images/steppingUp.png';
 
 const ListItem = styled('li')(({ theme }) => ({ margin: theme.spacing(0.5), }));
 

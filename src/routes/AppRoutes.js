@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Tags from "../component/Tags";
-import Trending from "../component/Trending";
-import VideoTags from "../component/VideoTags";
+import Tags from "../component/tags/Tags";
+import Trending from "../component/trending/Trending";
+import VideoTags from "../component/tags/VideoTags";
 
 const AppRoutes = () => {
     return (

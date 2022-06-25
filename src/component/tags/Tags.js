@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
-import InputField from '../assets/common/InputField';
+import InputField from '../../assets/common/InputField';
 import Chip from './Chip';
 import { useDispatch } from 'react-redux';
-import { getTags } from '../action/tagsAction';
+import { getTags } from '../../action/tagsAction';
 
 const Tags = () => {
     const dispatch = useDispatch();

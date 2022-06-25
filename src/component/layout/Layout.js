@@ -17,8 +17,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import AppRoutes from '../routes/AppRoutes';
-import { sideBarList } from '../constant/SideBar';
+import AppRoutes from '../../routes/AppRoutes';
+import { sideBarList } from '../../constant/SideBar';
 
 const drawerWidth = 240;
 
