@@ -24,7 +24,8 @@ export default function ChipsArray({ tags, isRequesting }) {
                 justifyContent: 'center',
                 flexWrap: 'wrap',
                 listStyle: 'none',
-                p: 0,
+                border: 'solid 0.5px',
+                p: 4,
                 m: 0,
             }}
             component="ul"

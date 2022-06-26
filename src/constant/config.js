@@ -1,4 +1,4 @@
-const main = false;
+const main = true;
 export const host = main ? 'https://youtagsserver.herokuapp.com' : 'http://localhost:1056';
 
 // https://youtagsserver.herokuapp.com/tags?title=vikram
